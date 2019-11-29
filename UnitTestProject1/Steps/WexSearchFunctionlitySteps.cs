@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -52,6 +54,9 @@ namespace UnitTestProject1.Steps
             }
             catch (NoSuchElementException e)
             {
+                //var screen = ((ITakesScreenshot) _currentDriver).GetScreenshot();
+                //var fileName = Directory.GetCurrentDirectory() + "error_screenshot_test" + DateTime.Now.ToString();
+                //screen.SaveAsFile(fileName,ImageFormat.Png);
                 Assert.IsTrue(false,"Could not find the page!");
             }
             
